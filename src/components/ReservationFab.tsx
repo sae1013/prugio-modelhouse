@@ -35,9 +35,9 @@ export default function ReservationFab() {
 
         <div className="flex">
           <a
-            href="tel:1688-6251"
-            aria-label="전화 걸기 1688-6251"
-            className="group relative flex flex-1 basis-1/2 items-center justify-center gap-2 py-5 sm:py-6 text-sm sm:text-base font-bold tracking-wide transition-colors hover:bg-white/[0.04] active:bg-white/[0.08]"
+            href="tel:010-8142-9380"
+            aria-label="전화 걸기 010-8142-9380"
+            className="group relative flex flex-1 basis-1/2 items-center justify-center gap-2 min-h-[84px] sm:min-h-[96px] py-4 text-base sm:text-lg font-bold tracking-wide transition-colors hover:bg-white/[0.04] active:bg-white/[0.08]"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -63,7 +63,7 @@ export default function ReservationFab() {
             type="button"
             onClick={() => setOpen(true)}
             aria-label="방문예약 접수"
-            className="group relative flex flex-1 basis-1/2 items-center justify-center gap-2 py-5 sm:py-6 text-sm sm:text-base font-bold tracking-wide transition-colors hover:bg-white/[0.04] active:bg-white/[0.08]"
+            className="group relative flex flex-1 basis-1/2 items-center justify-center gap-2 min-h-[84px] sm:min-h-[96px] py-4 text-base sm:text-lg font-bold tracking-wide transition-colors hover:bg-white/[0.04] active:bg-white/[0.08]"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"

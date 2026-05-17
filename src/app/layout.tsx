@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import ReservationFab from "@/components/ReservationFab";
+import PromoModal from "@/components/PromoModal";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -40,13 +41,14 @@ export default function RootLayout({
       <body
         className="min-h-full flex flex-col"
         style={{
-정          // 하단 고정 CTA 바(약 72px) + iOS safe-area 만큼 본문 아래 여백 확보
-          paddingBottom: "calc(72px + env(safe-area-inset-bottom))",
+          // 하단 고정 CTA 바(약 96px) + iOS safe-area 만큼 본문 아래 여백 확보
+          paddingBottom: "calc(96px + env(safe-area-inset-bottom))",
         }}
       >
         <Header />
         {children}
         <ReservationFab />
+        <PromoModal />
       </body>
     </html>
   );

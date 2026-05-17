@@ -129,7 +129,7 @@ export default function ReservationModal({ open, onClose }: Props) {
           kind: "error",
           message:
             json.error ??
-            "예약 접수에 실패했습니다. 잠시 후 다시 시도하시거나 1688-6251 로 연락주세요.",
+            "예약 접수에 실패했습니다. 잠시 후 다시 시도하시거나 010-8142-9380 로 연락주세요.",
         });
         return;
       }
@@ -139,7 +139,7 @@ export default function ReservationModal({ open, onClose }: Props) {
       setStatus({
         kind: "error",
         message:
-          "네트워크 오류가 발생했습니다. 잠시 후 다시 시도하시거나 1688-6251 로 연락주세요.",
+          "네트워크 오류가 발생했습니다. 잠시 후 다시 시도하시거나 010-8142-9380 로 연락주세요.",
       });
     }
   };
@@ -211,32 +211,30 @@ export default function ReservationModal({ open, onClose }: Props) {
                 />
               </Field>
 
-              <div className="grid grid-cols-2 gap-3">
-                <Field label="방문일자" required>
-                  <input
-                    type="date"
-                    value={date}
-                    min={today}
-                    max={maxDate}
-                    onChange={(e) => setDate(e.target.value)}
-                    className={inputCls}
-                  />
-                </Field>
-                <Field label="방문시간" required>
-                  <select
-                    value={time}
-                    onChange={(e) => setTime(e.target.value)}
-                    className={inputCls}
-                  >
-                    <option value="">선택</option>
-                    {TIME_SLOTS.map((t) => (
-                      <option key={t} value={t}>
-                        {t}
-                      </option>
-                    ))}
-                  </select>
-                </Field>
-              </div>
+              <Field label="방문일자" required>
+                <input
+                  type="date"
+                  value={date}
+                  min={today}
+                  max={maxDate}
+                  onChange={(e) => setDate(e.target.value)}
+                  className={inputCls}
+                />
+              </Field>
+              <Field label="방문시간" required>
+                <select
+                  value={time}
+                  onChange={(e) => setTime(e.target.value)}
+                  className={inputCls}
+                >
+                  <option value="">선택</option>
+                  {TIME_SLOTS.map((t) => (
+                    <option key={t} value={t}>
+                      {t}
+                    </option>
+                  ))}
+                </select>
+              </Field>
 
               <label className="flex items-start gap-2.5 text-xs text-zinc-600 leading-relaxed cursor-pointer">
                 <input
@@ -320,10 +318,10 @@ function SuccessView({ onClose }: { onClose: () => void }) {
         급한 문의는 아래 번호로 연락주세요.
       </p>
       <a
-        href="tel:1688-6251"
+        href="tel:010-8142-9380"
         className="mt-5 inline-flex items-center justify-center rounded-full bg-zinc-900 px-6 py-2.5 text-sm font-bold text-white"
       >
-        1688-6251
+        010-8142-9380
       </a>
       <button
         type="button"

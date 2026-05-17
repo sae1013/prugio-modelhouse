@@ -10,8 +10,8 @@
 
 import Image from "next/image";
 
-const TEL_DISPLAY = "1688-6251";
-const TEL_HREF = "tel:1688-6251";
+const TEL_DISPLAY = "010-8142-9380";
+const TEL_HREF = "tel:010-8142-9380";
 const SITE_TITLE_LINE1 = "업성 푸르지오";
 const SITE_TITLE_LINE2 = "레이크시티";
 
