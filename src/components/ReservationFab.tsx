@@ -37,7 +37,7 @@ export default function ReservationFab() {
           <a
             href="tel:1688-6251"
             aria-label="전화 걸기 1688-6251"
-            className="group relative flex flex-1 basis-1/2 items-center justify-center gap-2 py-4 sm:py-5 text-sm sm:text-base font-bold tracking-wide transition-colors hover:bg-white/[0.04] active:bg-white/[0.08]"
+            className="group relative flex flex-1 basis-1/2 items-center justify-center gap-2 py-5 sm:py-6 text-sm sm:text-base font-bold tracking-wide transition-colors hover:bg-white/[0.04] active:bg-white/[0.08]"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -63,7 +63,7 @@ export default function ReservationFab() {
             type="button"
             onClick={() => setOpen(true)}
             aria-label="방문예약 접수"
-            className="group relative flex flex-1 basis-1/2 items-center justify-center gap-2 py-4 sm:py-5 text-sm sm:text-base font-bold tracking-wide transition-colors hover:bg-white/[0.04] active:bg-white/[0.08]"
+            className="group relative flex flex-1 basis-1/2 items-center justify-center gap-2 py-5 sm:py-6 text-sm sm:text-base font-bold tracking-wide transition-colors hover:bg-white/[0.04] active:bg-white/[0.08]"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"

@@ -40,8 +40,8 @@ export default function RootLayout({
       <body
         className="min-h-full flex flex-col"
         style={{
-          // 하단 고정 CTA 바(약 60px) + iOS safe-area 만큼 본문 아래 여백 확보
-          paddingBottom: "calc(60px + env(safe-area-inset-bottom))",
+정          // 하단 고정 CTA 바(약 72px) + iOS safe-area 만큼 본문 아래 여백 확보
+          paddingBottom: "calc(72px + env(safe-area-inset-bottom))",
         }}
       >
         <Header />
