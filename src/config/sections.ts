@@ -9,6 +9,11 @@ export type SectionConfig = {
    * - 'carousel': 좌우 스와이프 캐러셀 (평형타입 등 여러 장 비교용)
    */
   type?: "stack" | "carousel";
+  /**
+   * 섹션 상단에 임베드할 영상 URL (선택).
+   * 예: Vimeo 플레이어 URL. 헤딩 바로 아래 16:9 박스로 표시되고 이미지가 그 아래 이어짐.
+   */
+  videoSrc?: string;
 };
 
 /**
@@ -28,6 +33,11 @@ export const sections: SectionConfig[] = [
   { id: "입지환경",     title: "입지 환경" },
   { id: "단지배치도",   title: "단지 배치도" },
   { id: "배치도",       title: "평형 안내", type: "carousel" },
-  { id: "커뮤니티",     title: "커뮤니티" },
+  {
+    id: "커뮤니티",
+    title: "커뮤니티",
+    videoSrc:
+      "https://player.vimeo.com/video/1181111791?autopause=0&title=0&byline=0&portrait=0&loop=1&background=1",
+  },
   { id: "오시는길",     title: "오시는 길" },
 ];

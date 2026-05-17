@@ -18,6 +18,7 @@ export type LoadedSection = {
   id: string;
   title?: string;
   type?: SectionConfig["type"];
+  videoSrc?: SectionConfig["videoSrc"];
   images: SectionImage[];
 };
 
@@ -52,5 +53,11 @@ export function loadSection(config: SectionConfig): LoadedSection | null {
     };
   });
 
-  return { id: config.id, title: config.title, type: config.type, images };
+  return {
+    id: config.id,
+    title: config.title,
+    type: config.type,
+    videoSrc: config.videoSrc,
+    images,
+  };
 }

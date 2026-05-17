@@ -14,6 +14,7 @@ export default function Section({
   id,
   title,
   type,
+  videoSrc,
   images,
   index,
   isFirst,
@@ -22,6 +23,20 @@ export default function Section({
     <section id={id} className="w-full">
       {title && <SectionHeading title={title} index={index} />}
       <div className="mx-auto w-full max-w-screen-lg">
+        {videoSrc && (
+          <div className="mb-6 sm:mb-10 px-4 sm:px-0">
+            {/* 16:9 비율 박스 */}
+            <div className="relative w-full overflow-hidden rounded-lg sm:rounded-xl bg-black aspect-video shadow-md">
+              <iframe
+                src={videoSrc}
+                allow="autoplay; fullscreen; picture-in-picture"
+                allowFullScreen
+                title={title ? `${title} 영상` : "섹션 영상"}
+                className="absolute inset-0 h-full w-full"
+              />
+            </div>
+          </div>
+        )}
         {type === "carousel" ? (
           <Carousel images={images} />
         ) : (
