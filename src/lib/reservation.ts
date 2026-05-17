@@ -21,9 +21,14 @@ export type ReservationPayload = {
   /** HH:00 (TIME_SLOTS 중 하나) */
   time: string;
   agree: boolean;
+  /** 전달사항 (선택). 최대 500자 */
+  message?: string;
   /** 봇 스팸 honeypot. 정상 사용자라면 항상 빈 문자열 */
   hp?: string;
 };
+
+/** 전달사항 최대 길이 */
+export const MESSAGE_MAX_LEN = 500;
 
 export type ValidationResult =
   | { ok: true }
@@ -96,6 +101,17 @@ export function validateReservation(
       ok: false,
       field: "agree",
       message: "개인정보 수집·이용에 동의해주세요.",
+    };
+  }
+  if (
+    input.message !== undefined &&
+    typeof input.message === "string" &&
+    input.message.length > MESSAGE_MAX_LEN
+  ) {
+    return {
+      ok: false,
+      field: "message",
+      message: `전달사항은 ${MESSAGE_MAX_LEN}자 이내로 입력해주세요.`,
     };
   }
   return { ok: true };

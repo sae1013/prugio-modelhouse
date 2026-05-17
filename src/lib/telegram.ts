@@ -16,14 +16,21 @@ export function formatReservationMessage(
   const dayOfWeek = WEEKDAY_KO[new Date(`${data.date}T00:00`).getDay()];
   const received = formatLocal(receivedAt);
 
-  return [
+  const lines = [
     "🏠 <b>방문예약 신규 접수</b>",
     "",
     `• 이름: <b>${escapeHtml(data.name.trim())}</b>`,
     `• 연락처: <a href="tel:${phoneDigits}">${escapeHtml(data.phone)}</a>`,
     `• 방문: <b>${data.date} (${dayOfWeek}) ${data.time}</b>`,
     `• 접수: ${received}`,
-  ].join("\n");
+  ];
+
+  const memo = data.message?.trim();
+  if (memo) {
+    lines.push("", "📝 <b>전달사항</b>", escapeHtml(memo));
+  }
+
+  return lines.join("\n");
 }
 
 /** 텔레그램으로 메시지 전송. 실패 시 throw. */

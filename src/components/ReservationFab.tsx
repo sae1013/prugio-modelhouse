@@ -35,8 +35,8 @@ export default function ReservationFab() {
 
         <div className="flex">
           <a
-            href="tel:010-8142-9380"
-            aria-label="전화 걸기 010-8142-9380"
+            href="tel:1688-6251"
+            aria-label="전화 걸기 1688-6251"
             className="group relative flex flex-1 basis-1/2 items-center justify-center gap-2 min-h-[84px] sm:min-h-[96px] py-4 text-base sm:text-lg font-bold tracking-wide transition-colors hover:bg-white/[0.04] active:bg-white/[0.08]"
           >
             <svg

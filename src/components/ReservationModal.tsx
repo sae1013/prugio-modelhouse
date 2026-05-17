@@ -15,6 +15,7 @@ import {
   ymdPlus,
   validateReservation,
   RESERVATION_DAYS_AHEAD,
+  MESSAGE_MAX_LEN,
   type ReservationPayload,
 } from "@/lib/reservation";
 
@@ -42,6 +43,7 @@ export default function ReservationModal({ open, onClose }: Props) {
   const [date, setDate] = useState("");
   const [time, setTime] = useState("");
   const [agree, setAgree] = useState(false);
+  const [message, setMessage] = useState("");
   const [hp, setHp] = useState(""); // honeypot
   const [fieldError, setFieldError] = useState<string | null>(null);
   const [status, setStatus] = useState<Status>({ kind: "idle" });
@@ -104,6 +106,7 @@ export default function ReservationModal({ open, onClose }: Props) {
       date,
       time,
       agree,
+      message: message.trim() || undefined,
       hp,
     };
 
@@ -129,7 +132,7 @@ export default function ReservationModal({ open, onClose }: Props) {
           kind: "error",
           message:
             json.error ??
-            "예약 접수에 실패했습니다. 잠시 후 다시 시도하시거나 010-8142-9380 로 연락주세요.",
+            "예약 접수에 실패했습니다. 잠시 후 다시 시도하시거나 1688-6251 로 연락주세요.",
         });
         return;
       }
@@ -139,7 +142,7 @@ export default function ReservationModal({ open, onClose }: Props) {
       setStatus({
         kind: "error",
         message:
-          "네트워크 오류가 발생했습니다. 잠시 후 다시 시도하시거나 010-8142-9380 로 연락주세요.",
+          "네트워크 오류가 발생했습니다. 잠시 후 다시 시도하시거나 1688-6251 로 연락주세요.",
       });
     }
   };
@@ -236,6 +239,20 @@ export default function ReservationModal({ open, onClose }: Props) {
                 </select>
               </Field>
 
+              <Field label="전달사항 (선택)">
+                <textarea
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
+                  placeholder="관심 평형, 문의사항 등을 자유롭게 적어주세요."
+                  maxLength={MESSAGE_MAX_LEN}
+                  rows={3}
+                  className={`${inputCls} resize-none`}
+                />
+                <span className="mt-1 block text-right text-[11px] text-zinc-400 tabular-nums">
+                  {message.length} / {MESSAGE_MAX_LEN}
+                </span>
+              </Field>
+
               <label className="flex items-start gap-2.5 text-xs text-zinc-600 leading-relaxed cursor-pointer">
                 <input
                   type="checkbox"
@@ -318,10 +335,10 @@ function SuccessView({ onClose }: { onClose: () => void }) {
         급한 문의는 아래 번호로 연락주세요.
       </p>
       <a
-        href="tel:010-8142-9380"
+        href="tel:1688-6251"
         className="mt-5 inline-flex items-center justify-center rounded-full bg-zinc-900 px-6 py-2.5 text-sm font-bold text-white"
       >
-        010-8142-9380
+        1688-6251
       </a>
       <button
         type="button"
