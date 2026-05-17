@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//Users/minwoo/.nvm/versions/node/**)",
+      "Bash(echo $PATH)",
+      "Bash(export PATH=\"$HOME/.nvm/versions/node/v24.14.1/bin:$PATH\")",
+      "Bash(npm install:*)",
+      "Bash(npx tsc:*)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(chmod +x /Users/minwoo/repo/modelhouse/.claude/dev.sh)",
+      "Bash(chmod +x /Users/minwoo/repo/modelhouse/.claude/start.sh)",
+      "Bash(npm run:*)",
+      "Bash(node -e \"const {imageSize} = require\\(''image-size''\\); const fs = require\\(''fs''\\); const buf = fs.readFileSync\\(''/Users/minwoo/repo/modelhouse/public/푸르지오로고.jpeg''\\); console.log\\(JSON.stringify\\(imageSize\\(buf\\)\\)\\);\")",
+      "Bash(ls -la /Users/minwoo/repo/modelhouse/public/*.jpeg)",
+      "Bash(ls -la /Users/minwoo/repo/modelhouse/public/prugio-logo* /Users/minwoo/repo/modelhouse/src/app/favicon.ico)"
+    ]
+  }
+}

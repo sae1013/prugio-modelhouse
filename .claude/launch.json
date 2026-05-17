@@ -1,0 +1,17 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "modelhouse-dev",
+      "runtimeExecutable": "/Users/minwoo/repo/modelhouse/.claude/dev.sh",
+      "runtimeArgs": [],
+      "port": 3000
+    },
+    {
+      "name": "modelhouse-start",
+      "runtimeExecutable": "/Users/minwoo/repo/modelhouse/.claude/start.sh",
+      "runtimeArgs": [],
+      "port": 3000
+    }
+  ]
+}
