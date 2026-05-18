@@ -42,7 +42,7 @@ export default function Hero({ vimeoSrc, lines }: Props) {
             className={
               i === 0
                 ? "text-sm sm:text-base tracking-[0.25em] mb-3 sm:mb-4 drop-shadow-md"
-                : "text-2xl sm:text-4xl md:text-5xl font-semibold tracking-tight leading-snug drop-shadow-lg"
+                : "text-2xl sm:text-4xl md:text-5xl font-semibold tracking-wider leading-snug drop-shadow-lg"
             }
           >
             {line}
