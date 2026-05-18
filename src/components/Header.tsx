@@ -27,7 +27,7 @@ export default function Header() {
             width={224}
             height={224}
             priority
-            className="h-9 w-9 sm:h-11 sm:w-11 rounded-xl"
+            className="h-11 w-11 sm:h-14 sm:w-14 rounded-xl"
           />
         </div>
 
