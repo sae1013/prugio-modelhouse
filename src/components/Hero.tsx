@@ -35,14 +35,14 @@ export default function Hero({ vimeoSrc, lines }: Props) {
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/45 via-black/15 to-black/55" />
 
       {/* 텍스트 */}
-      <div className="relative z-10 flex h-full w-full flex-col items-center justify-center px-6 text-center text-white">
+      <div className="relative z-10 flex h-full w-full flex-col items-center justify-center gap-y-4 sm:gap-y-6 px-6 text-center text-white">
         {lines.map((line, i) => (
           <p
             key={i}
             className={
               i === 0
                 ? "text-sm sm:text-base tracking-[0.25em] mb-3 sm:mb-4 drop-shadow-md"
-                : "text-2xl sm:text-4xl md:text-5xl font-semibold tracking-wider leading-snug drop-shadow-lg"
+                : "text-2xl sm:text-4xl md:text-5xl font-semibold tracking-tight leading-snug drop-shadow-lg"
             }
           >
             {line}
