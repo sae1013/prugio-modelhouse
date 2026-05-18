@@ -59,7 +59,7 @@ export default function PromoModal() {
       aria-modal="true"
       aria-label="홍보 배너"
     >
-      <div className="relative w-full max-w-sm sm:max-w-md h-[min(92svh,720px)] overflow-hidden rounded-2xl bg-white shadow-2xl flex flex-col">
+      <div className="relative w-full max-w-sm sm:max-w-md max-h-[min(92svh,720px)] overflow-hidden rounded-2xl bg-white shadow-2xl flex flex-col">
         {/* 닫기 */}
         <button
           type="button"

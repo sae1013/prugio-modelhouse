@@ -15,7 +15,11 @@ export default function Home() {
     <main className="w-full bg-white">
       <Hero
         vimeoSrc={VIMEO_SRC}
-        lines={["성성호수공원", "선착순 로얄 동·호수 분양"]}
+        lines={[
+          "성성호수공원",
+          "1억 이상의 프리미엄 기대가치",
+          "선착순 로얄 동·호수 분양",
+        ]}
       />
 
       {loaded.length === 0 ? (
