@@ -22,12 +22,12 @@ export default function Header() {
         {/* 좌: 푸르지오 로고 */}
         <div className="flex shrink-0 items-center">
           <Image
-            src="/prugio-logo.png"
+            src="/new_logo.jpeg"
             alt="푸르지오"
-            width={277}
-            height={291}
+            width={224}
+            height={224}
             priority
-            className="h-9 w-auto sm:h-11"
+            className="h-9 w-9 sm:h-11 sm:w-11 rounded-xl"
           />
         </div>
 
